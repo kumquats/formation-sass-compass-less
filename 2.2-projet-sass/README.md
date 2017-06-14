@@ -11,7 +11,7 @@ Convertir en SASS un projet existant codé en CSS.
 1. Modifier le fichier scss/application.scss pour y ajouter une css de normalize : cf. https://github.com/necolas/normalize.css/blob/master/normalize.css . Compiler et tester que la css a correctement été compilée en chargeant votre page index.html dans un navigateur
 2. Pour plus de simplicité par la suite dans la gestion des width et des paddings, ajouter la règle :
     ```css
-    - {
+    * {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
