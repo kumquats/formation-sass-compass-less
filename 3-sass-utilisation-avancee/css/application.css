@@ -525,7 +525,7 @@ form .form__input {
       top: -8px; }
     .progbar span.progbar__status--default {
       background-color: #45aea4; }
-      .progbar span.progbar__status--default::after {
+      .progbar span.progbar__status--default:after {
         background-color: #45aea4; }
     .progbar span.progbar__status--success {
       background-color: #51c76c; }

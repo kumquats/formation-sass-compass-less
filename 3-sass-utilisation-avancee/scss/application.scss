@@ -637,35 +637,11 @@ form {
 		    right: -10px;
 		    top: -8px;
 	    }
-		&.progbar__status {
-			&--default {
-				background-color: $default-color;
-				&::after{
-					background-color: $default-color;
-				}
-			}
-			&--success {
-				background-color: $success-color;
+		@each $status, $color in $status-colors {
+			&.progbar__status--#{$status} {
+				background-color: $color;
 				&:after{
-					background-color: $success-color;
-				}
-			}
-			&--error {
-				background-color: $error-color;
-				&:after{
-					background-color: $error-color;
-				}
-			}
-			&--warning {
-				background-color: $warning-color;
-				&:after{
-					background-color: $warning-color;
-				}
-			}
-			&--info {
-				background-color: $info-color;
-				&:after{
-					background-color: $info-color;
+					background-color: $color;
 				}
 			}
 		}
