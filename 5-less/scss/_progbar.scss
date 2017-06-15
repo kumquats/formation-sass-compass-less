@@ -1,3 +1,19 @@
+@mixin slide-animation($delay) {
+	@include animation(slide 3s linear infinite);
+	@include animation-delay($delay);
+}
+
+@include keyframes(slide) {
+	0% {
+		width: 0%;
+	}
+	50% {
+		width: 100%;
+	}
+	100% {
+		width: 0%;
+	}
+}
 
 // progress bars
 .progbar {
@@ -22,13 +38,16 @@
 		    right: -10px;
 		    top: -8px;
 	    }
+	    $delay: 0ms;
 		@each $status in $statuses {
 			&.progbar__status--#{$status} {
 				@include themify(background-color,  $status);
+				@include slide-animation($delay);
 				&:after{
 					@include themify(background-color,  $status);
 				}
 			}
+			$delay : $delay + 250ms;
 		}
 	}
 }
