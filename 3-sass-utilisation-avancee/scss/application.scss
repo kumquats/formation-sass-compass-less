@@ -480,6 +480,14 @@ $progress-background-color: #cdced0;
 $nav-gradient: linear-gradient(45deg, #6ed387, #33a1c2 );
 $thumbnail-framed-border-color: #cdced0;
 
+$status-colors: (
+	'default':  $default-color,
+	'success':  $success-color,
+	'error':  $error-color,
+	'warning':  $warning-color,
+	'info':  $info-color
+);
+
 // styles globaux
 body {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -555,20 +563,10 @@ blockquote {
 	    	margin-left: 20px;
 	    }
 	}
-	&--default {
-		background-color: $default-color;
-	}
-	&--success {
-		background-color: $success-color;
-	}
-	&--error {
-		background-color: $error-color;
-	}
-	&--warning {
-		background-color: $warning-color;
-	}
-	&--info {
-		background-color: $info-color;
+	@each $status, $color in $status-colors {
+		&--#{$status} {
+			background-color: $color;
+		}
 	}
 }
 
