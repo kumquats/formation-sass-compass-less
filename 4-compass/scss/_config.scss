@@ -1,20 +1,14 @@
 $grey: #797e83;
-$xlight-grey: #ebecec;
-$light-grey: #d6d7d9;
-$dark-grey: #525559;
 $medium-grey: #999da1;
+$dark-grey: #525559;
 $strong-grey: #656a6e;
+$light-grey: #d6d7d9;
+$xlight-grey: #ebecec;
+
+$default-color: #45aea4;
 $success-color: #51c76c;
 $error-color: #dd5d65;
 $warning-color: #fc613f;
 $info-color: #7f61b6;
 
-$default-color: #45aea4;
-
-$form-input-color: #e6e7e7;
-$form-input-border-color: #cdced0;
-
-$blockquote-border-color: #e6e7e7;
-$progress-background-color: #cdced0;
-$nav-gradient: linear-gradient(45deg, #6ed387, #33a1c2 );
-$thumbnail-framed-border-color: #cdced0;
+$statuses: 'default', 'success', 'error', 'warning', 'info';

@@ -396,10 +396,17 @@ template {
 
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #797e83;
   line-height: 1.5;
   font-size: 16px;
   font-weight: 300; }
+  .theme-default body {
+    color: #797e83; }
+  .theme-alternative body {
+    color: #ccc; }
+  .theme-default body {
+    background-color: #fff; }
+  .theme-alternative body {
+    background-color: #333; }
 
 h4 {
   margin-top: 2.625em;
@@ -545,46 +552,46 @@ form .form__input {
       border-radius: 50%;
       right: -10px;
       top: -8px; }
-  .theme-default .progbar .progbar__status--default {
-    background-color: #45aea4; }
-  .theme-alternative .progbar .progbar__status--default {
-    background-color: #00b8f3; }
-  .theme-default .progbar .progbar__status--success {
-    background-color: #51c76c; }
-  .theme-alternative .progbar .progbar__status--success {
-    background-color: #19ff99; }
-  .theme-default .progbar .progbar__status--error {
-    background-color: #dd5d65; }
-  .theme-alternative .progbar .progbar__status--error {
-    background-color: #ff703b; }
-  .theme-default .progbar .progbar__status--warning {
-    background-color: #fc613f; }
-  .theme-alternative .progbar .progbar__status--warning {
-    background-color: #ffa03c; }
-  .theme-default .progbar .progbar__status--info {
-    background-color: #7f61b6; }
-  .theme-alternative .progbar .progbar__status--info {
-    background-color: #b618ff; }
-  .theme-default .progbar .progbar__status--default:after {
-    background-color: #45aea4; }
-  .theme-alternative .progbar .progbar__status--default:after {
-    background-color: #00b8f3; }
-  .theme-default .progbar .progbar__status--success:after {
-    background-color: #51c76c; }
-  .theme-alternative .progbar .progbar__status--success:after {
-    background-color: #19ff99; }
-  .theme-default .progbar .progbar__status--error:after {
-    background-color: #dd5d65; }
-  .theme-alternative .progbar .progbar__status--error:after {
-    background-color: #ff703b; }
-  .theme-default .progbar .progbar__status--warning:after {
-    background-color: #fc613f; }
-  .theme-alternative .progbar .progbar__status--warning:after {
-    background-color: #ffa03c; }
-  .theme-default .progbar .progbar__status--info:after {
-    background-color: #7f61b6; }
-  .theme-alternative .progbar .progbar__status--info:after {
-    background-color: #b618ff; }
+    .theme-default .progbar span.progbar__status--default {
+      background-color: #45aea4; }
+    .theme-alternative .progbar span.progbar__status--default {
+      background-color: #00b8f3; }
+    .theme-default .progbar span.progbar__status--default:after {
+      background-color: #45aea4; }
+    .theme-alternative .progbar span.progbar__status--default:after {
+      background-color: #00b8f3; }
+    .theme-default .progbar span.progbar__status--success {
+      background-color: #51c76c; }
+    .theme-alternative .progbar span.progbar__status--success {
+      background-color: #19ff99; }
+    .theme-default .progbar span.progbar__status--success:after {
+      background-color: #51c76c; }
+    .theme-alternative .progbar span.progbar__status--success:after {
+      background-color: #19ff99; }
+    .theme-default .progbar span.progbar__status--error {
+      background-color: #dd5d65; }
+    .theme-alternative .progbar span.progbar__status--error {
+      background-color: #ff703b; }
+    .theme-default .progbar span.progbar__status--error:after {
+      background-color: #dd5d65; }
+    .theme-alternative .progbar span.progbar__status--error:after {
+      background-color: #ff703b; }
+    .theme-default .progbar span.progbar__status--warning {
+      background-color: #fc613f; }
+    .theme-alternative .progbar span.progbar__status--warning {
+      background-color: #ffa03c; }
+    .theme-default .progbar span.progbar__status--warning:after {
+      background-color: #fc613f; }
+    .theme-alternative .progbar span.progbar__status--warning:after {
+      background-color: #ffa03c; }
+    .theme-default .progbar span.progbar__status--info {
+      background-color: #7f61b6; }
+    .theme-alternative .progbar span.progbar__status--info {
+      background-color: #b618ff; }
+    .theme-default .progbar span.progbar__status--info:after {
+      background-color: #7f61b6; }
+    .theme-alternative .progbar span.progbar__status--info:after {
+      background-color: #b618ff; }
 
 img {
   margin-bottom: 1.5em;
@@ -618,9 +625,11 @@ img {
 .offcanvas {
   position: relative;
   padding: 0.625em;
-  letter-spacing: 1px;
-  background: #39add1;
-  background: linear-gradient(45deg, rgba(94, 206, 127, 0.8) 0%, #39add1 100%); }
+  letter-spacing: 1px; }
+  .theme-default .offcanvas {
+    background: linear-gradient(45deg, rgba(94, 206, 127, 0.8) 0%, #39add1 100%); }
+  .theme-alternative .offcanvas {
+    background: linear-gradient(45deg, #8d61dc 0%, #d62093 100%); }
   .offcanvas .icn--close {
     line-height: 0;
     cursor: pointer;
@@ -657,8 +666,5 @@ img {
       text-align: center;
       text-shadow: 0 1px rgba(11, 11, 11, 0.2);
       font-size: 1.125em; }
-
-body {
-  color: blue; }
 
 /*# sourceMappingURL=application.css.map */

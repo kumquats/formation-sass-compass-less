@@ -1,5 +1,5 @@
 // Boutons
-@include colorVariants('btn', 'background-color') {
+@include statusVariants('btn', 'background-color') {
 	display: block;
     text-align: center;
 	width: 100%;

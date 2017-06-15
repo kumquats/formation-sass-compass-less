@@ -13,24 +13,24 @@
 	    padding: 0.4em;
 	    border-bottom: 1px solid transparent;
 	    &:hover {
-		   @extend %nav___item--current-link;
+		   @extend %highlighted-link;
 		}
 	}
 }
-%nav___item--current-link  {
+%highlighted-link  {
 	color: #0b0b0b;
     border-color: #52bab3;
 }
 .nav__item--current a {
-	@extend %nav___item--current-link;
+	@extend %highlighted-link;
 }
 
 .offcanvas {
 	position: relative;
     padding: 0.625em;
     letter-spacing: 1px;
-    background: #39add1;
-    background: linear-gradient(45deg, rgba(94, 206, 127, 0.8) 0%, #39add1 100%);
+    // background: #39add1;
+    @include themify('background', 'nav-gradient');
 	.icn--close {
 		line-height: 0;
 	    cursor: pointer;

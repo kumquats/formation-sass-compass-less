@@ -1,19 +1,11 @@
-@mixin colorVariants($prefix, $property){
-	$variants: 'default', 'success', 'error', 'warning', 'info';
+@mixin statusVariants($prefix, $property){
 	%#{$prefix}{
 		@content;
 	}
-	@each $variant in $variants {
-		.#{$prefix}--#{$variant} {
-			@extend %#{$prefix} !optional;
-			@include themify($property, $variant);
+	@each $status in $statuses {
+		.#{$prefix}--#{$status} {
+			@extend %#{$prefix};
+			@include themify($property, $status);
 		}
 	}
-		// #{$prefix}--default,
-		// #{$prefix}--success,
-		// #{$prefix}--error,
-		// #{$prefix}--warning,
-		// #{$prefix}--info {
-		// 	@content;
-		// }
 }

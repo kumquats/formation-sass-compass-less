@@ -1,30 +1,24 @@
 
 $themes: (
   'default': (
+		'default-color': #45aea4,
 		'success-color': #51c76c,
 		'error-color': #dd5d65,
 		'warning-color': #fc613f,
 		'info-color': #7f61b6,
-		'default-color': #45aea4,
-		'form-input-color': #e6e7e7,
-		'form-input-border-color': #cdced0,
-		'blockquote-border-color': #e6e7e7,
-		'progress-background-color': #cdced0,
-		'nav-gradient': linear-gradient(45deg, #6ed387, #33a1c2 ),
-		'thumbnail-framed-border-color': #cdced0
+  		'primary-color': #797e83,
+  		'inverted-color': #fff,
+		'nav-gradient-color': linear-gradient(45deg, rgba(94, 206, 127, 0.8) 0%, #39add1 100%),
   ),
   'alternative': (
+		'default-color': #00b8f3,
 		'success-color': #19ff99,
 		'error-color': #ff703b,
 		'warning-color': #ffa03c,
 		'info-color': #b618ff,
-		'default-color': #00b8f3,
-		'form-input-color': #efdeef,
-		'form-input-border-color': #e0bde0,
-		'blockquote-border-color': #e6e7e7,
-		'progress-background-color': #9e9eff,
-		'nav-gradient': linear-gradient(45deg, #8d61dc, #d62093 ),
-		'thumbnail-framed-border-color': #cdced0
+  		'primary-color': #ccc,
+  		'inverted-color': #333,
+		'nav-gradient-color': linear-gradient(45deg, #8d61dc 0%, #d62093 100%),
   )
 ) !default;
 

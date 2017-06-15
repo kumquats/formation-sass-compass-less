@@ -5,7 +5,8 @@
 }
 body {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: $grey;
+	@include themify('color', 'primary');
+	@include themify('background-color', 'inverted');
 	line-height: 1.5;
 	font-size: 16px;
 	font-weight: 300;

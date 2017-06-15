@@ -22,21 +22,13 @@
 		    right: -10px;
 		    top: -8px;
 	    }
+		@each $status in $statuses {
+			&.progbar__status--#{$status} {
+				@include themify(background-color,  $status);
+				&:after{
+					@include themify(background-color,  $status);
+				}
+			}
+		}
 	}
-    @include colorVariants('progbar__status', background-color) {}
-	.progbar__status--default:after{
-		@include themify(background-color, default);
-	}
-	.progbar__status--success:after{
-		@include themify(background-color, success);
-	}
-	.progbar__status--error:after{
-		@include themify(background-color, error);
-	}
-	.progbar__status--warning:after{
-		@include themify(background-color, warning);
-	}
-	.progbar__status--info:after{
-		@include themify(background-color, info);
-	}    
 }
