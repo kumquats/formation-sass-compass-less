@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -7,7 +7,6 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 html {
   line-height: 1.15;
   /* 1 */
@@ -395,9 +394,6 @@ template {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/**
- * Mon intégration
- */
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #797e83;
@@ -444,7 +440,10 @@ blockquote {
   font-style: italic; }
 
 .btn--default, .btn--success, .btn--error, .btn--warning, .btn--info {
-  display: inline-block;
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
   line-height: 1.5;
   padding: 15px 30px;
   border: 0;
@@ -457,21 +456,42 @@ blockquote {
   cursor: pointer; }
   .btn--default:hover, .btn--success:hover, .btn--error:hover, .btn--warning:hover, .btn--info:hover {
     opacity: .75; }
-  .btn--default:nth-child(n+2), .btn--success:nth-child(n+2), .btn--error:nth-child(n+2), .btn--warning:nth-child(n+2), .btn--info:nth-child(n+2) {
-    margin-left: 20px; }
-.btn--default {
+  @media screen and (min-width: 769px) {
+    .btn--default, .btn--success, .btn--error, .btn--warning, .btn--info {
+      margin-bottom: 0;
+      display: inline-block;
+      width: auto; }
+      .btn--default:nth-child(n+2), .btn--success:nth-child(n+2), .btn--error:nth-child(n+2), .btn--warning:nth-child(n+2), .btn--info:nth-child(n+2) {
+        margin-left: 20px; } }
+
+.theme-default .btn--default {
   background-color: #45aea4; }
-.btn--success {
+.theme-alternative .btn--default {
+  background-color: #00b8f3; }
+
+.theme-default .btn--success {
   background-color: #51c76c; }
-.btn--error {
+.theme-alternative .btn--success {
+  background-color: #19ff99; }
+
+.theme-default .btn--error {
   background-color: #dd5d65; }
-.btn--warning {
+.theme-alternative .btn--error {
+  background-color: #ff703b; }
+
+.theme-default .btn--warning {
   background-color: #fc613f; }
-.btn--info {
+.theme-alternative .btn--warning {
+  background-color: #ffa03c; }
+
+.theme-default .btn--info {
   background-color: #7f61b6; }
+.theme-alternative .btn--info {
+  background-color: #b618ff; }
 
 form .form__btn {
-  display: inline-block;
+  display: block;
+  width: 100%;
   line-height: 1.5;
   padding: 15px 30px;
   border: 0;
@@ -481,11 +501,13 @@ form .form__btn {
   font-size: 0.875em;
   font-weight: 400;
   transition: opacity 0.3s;
-  cursor: pointer;
-  background-color: #45aea4;
-  width: 100%; }
+  cursor: pointer; }
   form .form__btn:hover {
     opacity: .75; }
+  .theme-default form .form__btn {
+    background-color: #45aea4; }
+  .theme-alternative form .form__btn {
+    background-color: #00b8f3; }
 form .form__label--hidden {
   display: none; }
 form .form__input {
@@ -523,26 +545,46 @@ form .form__input {
       border-radius: 50%;
       right: -10px;
       top: -8px; }
-    .progbar span.progbar__status--default {
-      background-color: #45aea4; }
-      .progbar span.progbar__status--default::after {
-        background-color: #45aea4; }
-    .progbar span.progbar__status--success {
-      background-color: #51c76c; }
-      .progbar span.progbar__status--success:after {
-        background-color: #51c76c; }
-    .progbar span.progbar__status--error {
-      background-color: #dd5d65; }
-      .progbar span.progbar__status--error:after {
-        background-color: #dd5d65; }
-    .progbar span.progbar__status--warning {
-      background-color: #fc613f; }
-      .progbar span.progbar__status--warning:after {
-        background-color: #fc613f; }
-    .progbar span.progbar__status--info {
-      background-color: #7f61b6; }
-      .progbar span.progbar__status--info:after {
-        background-color: #7f61b6; }
+  .theme-default .progbar .progbar__status--default {
+    background-color: #45aea4; }
+  .theme-alternative .progbar .progbar__status--default {
+    background-color: #00b8f3; }
+  .theme-default .progbar .progbar__status--success {
+    background-color: #51c76c; }
+  .theme-alternative .progbar .progbar__status--success {
+    background-color: #19ff99; }
+  .theme-default .progbar .progbar__status--error {
+    background-color: #dd5d65; }
+  .theme-alternative .progbar .progbar__status--error {
+    background-color: #ff703b; }
+  .theme-default .progbar .progbar__status--warning {
+    background-color: #fc613f; }
+  .theme-alternative .progbar .progbar__status--warning {
+    background-color: #ffa03c; }
+  .theme-default .progbar .progbar__status--info {
+    background-color: #7f61b6; }
+  .theme-alternative .progbar .progbar__status--info {
+    background-color: #b618ff; }
+  .theme-default .progbar .progbar__status--default:after {
+    background-color: #45aea4; }
+  .theme-alternative .progbar .progbar__status--default:after {
+    background-color: #00b8f3; }
+  .theme-default .progbar .progbar__status--success:after {
+    background-color: #51c76c; }
+  .theme-alternative .progbar .progbar__status--success:after {
+    background-color: #19ff99; }
+  .theme-default .progbar .progbar__status--error:after {
+    background-color: #dd5d65; }
+  .theme-alternative .progbar .progbar__status--error:after {
+    background-color: #ff703b; }
+  .theme-default .progbar .progbar__status--warning:after {
+    background-color: #fc613f; }
+  .theme-alternative .progbar .progbar__status--warning:after {
+    background-color: #ffa03c; }
+  .theme-default .progbar .progbar__status--info:after {
+    background-color: #7f61b6; }
+  .theme-alternative .progbar .progbar__status--info:after {
+    background-color: #b618ff; }
 
 img {
   margin-bottom: 1.5em;
@@ -568,11 +610,8 @@ img {
     display: block;
     padding: 0.4em;
     border-bottom: 1px solid transparent; }
-    .nav__item a:hover, .nav__item--current a:hover {
-      color: #0b0b0b;
-      border-color: #52bab3; }
 
-.nav__item--current a {
+.nav__item a:hover, .nav__item--current a:hover, .nav__item--current a {
   color: #0b0b0b;
   border-color: #52bab3; }
 
@@ -618,5 +657,8 @@ img {
       text-align: center;
       text-shadow: 0 1px rgba(11, 11, 11, 0.2);
       font-size: 1.125em; }
+
+body {
+  color: blue; }
 
 /*# sourceMappingURL=application.css.map */

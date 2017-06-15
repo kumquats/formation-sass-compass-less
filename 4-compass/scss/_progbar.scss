@@ -1,0 +1,42 @@
+
+// progress bars
+.progbar {
+	height: 4px;
+    border-radius: 2px;
+    background: $light-grey;
+    position: relative;
+    margin-bottom: 2.875em;
+	span{
+		display: block;
+	    width: 50%;
+	    height: 100%;
+	    border-radius: inherit;
+	    position: relative;
+	    &:after{
+	    	display: block;
+		    content: '';
+		    position: absolute;
+	    	width: 20px;
+		    height: 20px;
+		    border-radius: 50%;
+		    right: -10px;
+		    top: -8px;
+	    }
+	}
+    @include colorVariants('progbar__status', background-color) {}
+	.progbar__status--default:after{
+		@include themify(background-color, default);
+	}
+	.progbar__status--success:after{
+		@include themify(background-color, success);
+	}
+	.progbar__status--error:after{
+		@include themify(background-color, error);
+	}
+	.progbar__status--warning:after{
+		@include themify(background-color, warning);
+	}
+	.progbar__status--info:after{
+		@include themify(background-color, info);
+	}    
+}
