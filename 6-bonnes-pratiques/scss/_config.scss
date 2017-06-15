@@ -1,0 +1,17 @@
+$grey: #797e83;
+$medium-grey: #999da1;
+$dark-grey: #525559;
+$strong-grey: #656a6e;
+$light-grey: #d6d7d9;
+$xlight-grey: #ebecec;
+
+$default-color: #45aea4;
+$success-color: #51c76c;
+$error-color: #dd5d65;
+$warning-color: #fc613f;
+$info-color: #7f61b6;
+
+$statuses: 'default', 'success', 'error', 'warning', 'info';
+
+@import "compass/css3";
+@import "susy";

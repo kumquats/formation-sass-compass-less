@@ -1,0 +1,11 @@
+@mixin statusVariants($prefix, $property){
+	%#{$prefix}{
+		@content;
+	}
+	@each $status in $statuses {
+		.#{$prefix}--#{$status} {
+			@extend %#{$prefix};
+			@include themify($property, $status);
+		}
+	}
+}

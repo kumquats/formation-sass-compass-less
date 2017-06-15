@@ -1,0 +1,24 @@
+$susy: (
+  columns: 12,
+  gutter-position: inside
+);
+
+.grid {
+	@include container(90%);
+}
+
+@for $i from 1 to 13 {
+	.grid__col--#{$i} {
+		@include span( $i );
+	}
+	.theme__poly .grid__col--#{$i} {
+		border: 1px solid $default-color;
+	}
+	
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	float: none !important;
+}
